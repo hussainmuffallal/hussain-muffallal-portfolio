@@ -145,71 +145,93 @@ export default function Portfolio() {
 
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center pt-20" ref={heroRef}>
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <div className="inline-block mb-6 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm">
-            <span className="text-blue-400">●</span> Seeking Internship Opportunities
-          </div>
+        {/* Main Content Wrapper - keeps flex-col (image at bottom) on mobile */}
+        <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
           
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent">
-              Software Engineering
-            </span>
-            <br />
-            <span className="text-5xl md:text-7xl bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Student & Developer
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl mx-auto">
-            Building intelligent full-stack applications and scalable solutions.
-          </p>
+          {/* Left Column: Text Content */}
+          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="inline-block mb-6 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-sm">
+              <span className="text-blue-400">●</span> Seeking Internship Opportunities
+            </div>
+            
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent">
+                Software Engineering
+              </span>
+              <br />
+              <span className="text-5xl md:text-7xl bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Student & Developer
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl mx-auto md:mx-0">
+              Building intelligent full-stack applications and scalable solutions.
+            </p>
 
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a 
-              href="#projects"
-              className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full font-medium flex items-center gap-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
-            >
-              View My Work
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a 
-              href="#contact"
-              className="px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full font-medium hover:bg-white/10 transition-all duration-300 hover:scale-105"
-            >
-              Get In Touch
-            </a>
-            <a 
-              href="/resume.pdf"
-              download="My_Resume.pdf"
-              className="px-8 py-4 border border-blue-400/50 text-blue-400 rounded-full font-medium hover:bg-blue-400/10 transition-all duration-300 hover:scale-105"
-            >
-              Download CV
-            </a>
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+              <a 
+                href="#projects"
+                className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full font-medium flex items-center gap-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+              >
+                View My Work
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a 
+                href="#contact"
+                className="px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full font-medium hover:bg-white/10 transition-all duration-300 hover:scale-105"
+              >
+                Get In Touch
+              </a>
+              <a 
+                href="/resume.pdf"
+                download="My_Resume.pdf"
+                className="px-8 py-4 border border-blue-400/50 text-blue-400 rounded-full font-medium hover:bg-blue-400/10 transition-all duration-300 hover:scale-105"
+              >
+                Download CV
+              </a>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex gap-6 justify-center md:justify-start mt-12 mb-8 md:mb-0">
+              {[
+                { Icon: User, href: "https://github.com/hussainmuffallal" },
+                { Icon: Briefcase, href: "https://www.linkedin.com/in/hussainmuffallal/" },
+                { Icon: Mail, href: "mailto:hussainmufallal2004@gmail.com" }
+              ].map((social, idx) => {
+                const Icon = social.Icon;
+                return (
+                  <a
+                    key={idx}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 hover:scale-110"
+                  >
+                    <Icon className="w-5 h-5" />
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
-          <div className="flex gap-6 justify-center mt-12">
-            {[
-              { Icon: User, href: "https://github.com/hussainmuffallal" },
-              { Icon: Briefcase, href: "https://www.linkedin.com/in/hussainmuffallal/" },
-              { Icon: Mail, href: "mailto:hussainmufallal2004@gmail.com" }
-            ].map((social, idx) => {
-              const Icon = social.Icon;
-              return (
-                <a
-                  key={idx}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 hover:scale-110"
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              );
-            })}
+          {/* Right Column: Profile Image - Borderless */}
+          <div className="flex-shrink-0 mt-8 md:mt-0 mb-12 md:mb-0">
+            <div className="relative">
+              {/* Soft background glowing accent */}
+              <div className="absolute inset-0 bg-blue-600/10 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
+              {/* CLEAN BORDERLESS IMAGE */}
+              <img 
+                src="/profile.jpg" 
+                alt="Hussain Muffallal - Portfolio Picture" 
+                className="relative w-60 h-80 md:w-100 md:h-120 rounded-3xl shadow-2xl object-cover transition-transform duration-500 hover:scale-105" 
+              />
+            </div>
           </div>
+
         </div>
 
-        {/* Floating elements */}
+        {/* Floating particles background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_, i) => (
             <div
@@ -226,8 +248,8 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="relative py-32 px-6">
+      {/* Projects Section - Reduced Mobile Gap via pt-16 */}
+      <section id="projects" className="relative pt-16 pb-32 md:pt-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
