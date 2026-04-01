@@ -4,6 +4,8 @@ export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [formStatus, setFormStatus] = useState('');
+
   const heroRef = useRef(null);
 
   useEffect(() => {
@@ -13,6 +15,33 @@ export default function Portfolio() {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
+  const onSubmit = async (event) => {
+    event.preventDefault(); 
+    setFormStatus("Sending...");
+
+    const formData = new FormData(event.target);
+    formData.append("access_key", "a2bd8eac-44d5-490b-be82-f55a3f93963f"); 
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setFormStatus("Message sent successfully!");
+        event.target.reset(); 
+        setTimeout(() => setFormStatus(""), 3000); 
+      } else {
+        setFormStatus("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setFormStatus("Error sending message.");
+    }
+  };
 
   const projects = [
     {
@@ -298,35 +327,51 @@ export default function Portfolio() {
             Currently looking for internship opportunities. My inbox is always open!
           </p>
 
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-12">
+          <form onSubmit={onSubmit} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-12">
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <input
                 type="text"
+                name="name"
+                required
                 placeholder="Your Name"
                 className="px-6 py-4 bg-white/5 border border-white/10 rounded-2xl focus:outline-none focus:border-blue-400/50 transition-colors"
               />
               <input
                 type="email"
+                name="email"
+                required
                 placeholder="Your Email"
                 className="px-6 py-4 bg-white/5 border border-white/10 rounded-2xl focus:outline-none focus:border-purple-400/50 transition-colors"
               />
             </div>
             <textarea
+              name="message"
+              required
               placeholder="Your message..."
               rows="6"
               className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl focus:outline-none focus:border-blue-400/50 transition-colors mb-8"
             />
-            <button className="w-full md:w-auto px-12 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full font-medium hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
-              Send Message
-            </button>
-          </div>
+            
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <button type="submit" className="w-full md:w-auto px-12 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full font-medium hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
+                Send Message
+              </button>
+              
+              {/* This is where the success/loading message appears */}
+              {formStatus && (
+                <span className={`text-sm font-medium ${formStatus.includes("Error") || formStatus.includes("wrong") ? "text-red-400" : "text-green-400"}`}>
+                  {formStatus}
+                </span>
+              )}
+            </div>
+          </form>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="relative py-12 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto text-center text-slate-400">
-          <p>© {new Date().getFullYear()} Crafted with passion and innovation.</p>
+          <p>© {new Date().getFullYear()} Hussain Muffallal.</p>
         </div>
       </footer>
     </div>
