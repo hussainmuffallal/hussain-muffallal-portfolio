@@ -216,18 +216,18 @@ export default function Portfolio() {
           </div>
 
           {/* Right Column: Profile Image - Borderless */}
-          <div className="flex-shrink-0 mt-8 md:mt-0 mb-12 md:mb-0">
+          {/* <div className="flex-shrink-0 mt-8 md:mt-0 mb-12 md:mb-0">
             <div className="relative">
-              {/* Soft background glowing accent */}
+              {/* Soft background glowing accent 
               <div className="absolute inset-0 bg-blue-600/10 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
-              {/* CLEAN BORDERLESS IMAGE */}
-              <img 
+              {/* CLEAN BORDERLESS IMAGE 
+              {/* <img 
                 src="/profile.jpg" 
                 alt="Hussain Muffallal - Portfolio Picture" 
                 className="relative w-60 h-80 md:w-100 md:h-120 rounded-3xl shadow-2xl object-cover transition-transform duration-500 hover:scale-105" 
-              />
+              /> 
             </div>
-          </div>
+          </div> */}
 
         </div>
 
