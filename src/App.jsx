@@ -154,13 +154,13 @@ export default function Portfolio() {
               <span className="text-blue-400">●</span> Seeking Internship Opportunities
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent">
-                Software Engineering
+                Hussain Muffallal
               </span>
               <br />
-              <span className="text-5xl md:text-7xl bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Student & Developer
+              <span className="text-4xl md:text-6xl bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Software Engineering Student
               </span>
             </h1>
             
@@ -216,18 +216,18 @@ export default function Portfolio() {
           </div>
 
           {/* Right Column: Profile Image - Borderless */}
-          {/* <div className="flex-shrink-0 mt-8 md:mt-0 mb-12 md:mb-0">
+          <div className="flex-shrink-0 mt-8 md:mt-0 mb-12 md:mb-0">
             <div className="relative">
-              {/* Soft background glowing accent 
+              {/* Soft background glowing accent  */}
               <div className="absolute inset-0 bg-blue-600/10 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
-              {/* CLEAN BORDERLESS IMAGE 
-              {/* <img 
-                src="/profile.jpg" 
+              {/* CLEAN BORDERLESS IMAGE  */}
+              <img 
+                src="/profile.jpeg" 
                 alt="Hussain Muffallal - Portfolio Picture" 
                 className="relative w-60 h-80 md:w-100 md:h-120 rounded-3xl shadow-2xl object-cover transition-transform duration-500 hover:scale-105" 
               /> 
             </div>
-          </div> */}
+          </div>
 
 
         </div>
