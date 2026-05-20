@@ -49,7 +49,7 @@ export default function Portfolio() {
       description: "Engineered the AI/ML backend for a smart event planning platform. Optimized a Random Forest model, boosting prediction accuracy by 2% through custom feature engineering (budget_per_head).",
       tech: ["Python", "Scikit-Learn", "React", "Machine Learning"],
       gradient: "from-blue-600 to-cyan-600",
-      link: "https://github.com/Rism583/Project-Eventlk-1"
+      link: "https://eventlk.com"
     },
     {
       title: "Math Puzzle Mobile App",
