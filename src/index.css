@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  /* Engineered Minimalism Theme */
+  --color-primary: #3b82f6; 
+  --color-accent: #22d3ee;  
+  --color-surface: #0f172a; 
+  --color-background: #020617; 
+}
