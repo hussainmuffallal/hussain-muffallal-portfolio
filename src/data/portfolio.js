@@ -1,26 +1,32 @@
-import { Code2, Brain, Smartphone } from "lucide-react";
+import { BrainCircuit, Globe, Smartphone, Database, Layout, Server } from "lucide-react";
 
 export const projects = [
     {
-        title: "EventLK Platform",
-        description: "Engineered the AI/ML backend for a smart event planning platform. Optimized a Random Forest model, boosting prediction accuracy by 2% through custom feature engineering (budget_per_head).",
+        title: "EventLK AI Engine",
+        description: "Engineered the AI/ML backend for a smart event planning platform. Optimized a Random Forest model, boosting prediction accuracy through custom feature engineering (budget_per_head).",
         tech: ["Python", "Scikit-Learn", "React", "Machine Learning"],
-        link: "https://eventlk.com"
+        link: "https://eventlk.com",
+        icon: BrainCircuit // Dynamic icon assigned here
     },
     {
-        title: "Math Puzzle Mobile App",
-        description: "A native mobile application featuring dynamic math puzzles and logic games designed to test and improve cognitive skills and problem-solving.",
-        tech: ["Kotlin", "Android Studio", "Mobile UI"],
+        title: "Rosary Global Booking",
+        description: "Designed and deployed a serverless freelance booking platform for a travel agency. Engineered dynamic pricing features, Google Maps API integration, and advanced SEO.",
+        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+        link: "https://github.com/yourusername", // Update with your actual link
+        icon: Globe
     },
     {
-        title: "Task Management System",
-        description: "A streamlined application for tracking daily tasks, managing project milestones, and improving overall personal productivity.",
-        tech: ["Python", "Algorithms", "Data Structures"],
+        title: "Cross Math Mobile",
+        description: "A native Android application featuring dynamic algorithmic puzzle generation, robust state management, and a highly responsive touch interface.",
+        tech: ["Kotlin", "Android Studio", "Algorithms"],
+        link: "https://github.com/yourusername", // Update with your actual link
+        icon: Smartphone
     }
 ];
 
 export const skills = [
-    { name: "Full-Stack Development", icon: Code2, level: 90 },
-    { name: "AI & Machine Learning", icon: Brain, level: 85 },
-    { name: "Mobile Development", icon: Smartphone, level: 80 }
+    { name: "Machine Learning & AI", icon: BrainCircuit },
+    { name: "Frontend (React / Next.js)", icon: Layout },
+    { name: "Backend (Python / PHP)", icon: Server },
+    { name: "Database Architecture", icon: Database }
 ];

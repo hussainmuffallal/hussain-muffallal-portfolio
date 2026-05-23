@@ -1,8 +1,7 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Send, Mail } from "lucide-react";
 
 export default function Contact() {
-
     // Encapsulated state just for the contact form
     const [formStatus, setFormStatus] = useState('');
 
@@ -35,11 +34,11 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="relative py-16 md:py-32 px-6 bg-slate-950 border-t border-white/5">
+        <section id="contact" className="relative py-16 md:py-32 px-6 bg-background border-t border-surface">
             <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-16">
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-900 border border-white/10 mb-6">
-                        <Mail className="w-6 h-6 text-blue-400" />
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-surface border border-surface mb-6">
+                        <Mail className="w-6 h-6 text-primary" />
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white tracking-tight">
                         Let's Connect
@@ -49,29 +48,30 @@ export default function Contact() {
                     </p>
                 </div>
 
-                <div className="bg-slate-900/40 border border-white/5 rounded-3xl p-6 md:p-10">
+                {/* Form Container */}
+                <div className="bg-surface/30 border border-surface rounded-3xl p-6 md:p-10">
                     <form onSubmit={onSubmit} className="space-y-6">
                         <div className="grid md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <label htmlFor="name" className="text-sm font-medium text-slate-300 ml-1">Name</label>
                                 <input 
-                                type="text" 
-                                name="name" 
-                                id="name" 
-                                required
-                                className="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all" 
-                                placeholder="Your Name" 
+                                    type="text" 
+                                    name="name" 
+                                    id="name" 
+                                    required
+                                    className="w-full bg-background border border-surface rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all" 
+                                    placeholder="Your Name" 
                                 />
                             </div>
                             <div className="space-y-2">
                                 <label htmlFor="email" className="text-sm font-medium text-slate-300 ml-1">Email</label>
                                 <input 
-                                type="email" 
-                                name="email" 
-                                id="email" 
-                                required
-                                className="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all" 
-                                placeholder="your@email.com" 
+                                    type="email" 
+                                    name="email" 
+                                    id="email" 
+                                    required
+                                    className="w-full bg-background border border-surface rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all" 
+                                    placeholder="your@email.com" 
                                 />
                             </div>
                         </div>
@@ -82,7 +82,7 @@ export default function Contact() {
                                 id="message" 
                                 required
                                 rows="5" 
-                                className="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all resize-none" 
+                                className="w-full bg-background border border-surface rounded-xl px-4 py-3.5 text-white placeholder-slate-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none" 
                                 placeholder="How can we work together?"
                             ></textarea>
                         </div>
@@ -90,7 +90,7 @@ export default function Contact() {
                         <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
                             <button 
                                 type="submit" 
-                                className="w-full sm:w-auto px-8 py-4 bg-white text-slate-950 font-semibold rounded-xl hover:bg-slate-200 transition-colors flex items-center justify-center gap-2 group"
+                                className="w-full sm:w-auto px-8 py-4 bg-white text-background font-semibold rounded-xl hover:bg-slate-200 transition-colors flex items-center justify-center gap-2 group"
                             >
                                 Send Message
                                 <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

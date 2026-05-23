@@ -1,50 +1,46 @@
 import React from "react";
+import { Cpu } from "lucide-react";
 import { skills } from "../data/portfolio";
 
 export default function Skills() {
-    return(
-        <section id="skills" className="relative py-16 md:py-32 px-6 border-t border-white/5 bg-slate-950">
-            <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white tracking-tight">
-                        Technical Arsenal
+    return (
+        <section id="skills" className="py-24 bg-surface/30 border-t border-b border-surface">
+            <div className="max-w-6xl mx-auto px-6">
+                
+                {/* Section Header */}
+                <div className="mb-16 text-center md:text-left">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center md:justify-start gap-3 text-white">
+                        <Cpu className="w-8 h-8 text-primary" />
+                        Core <span className="text-primary">Competencies</span>
                     </h2>
-                    <p className="text-lg text-slate-400">
-                        Core competencies across full-stack and machine learning development.
-                    </p>
+                    <div className="w-20 h-1 bg-primary rounded-full mx-auto md:mx-0"></div>
                 </div>
 
-                <div className="space-y-6">
-                {skills.map((skill, idx) => {
-                    // We assign the icon component to a capitalized variable so React knows to render it
-                    const Icon = skill.icon; 
-                    
-                    return (
-                    <div 
-                        key={idx} 
-                        className="bg-slate-900/40 border border-white/5 rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center gap-6 hover:bg-slate-900 hover:border-white/10 transition-all duration-300"
-                    >
-                        <div className="w-12 h-12 rounded-xl bg-slate-800 border border-white/5 flex items-center justify-center shrink-0">
-                            <Icon className="w-6 h-6 text-slate-400" />
-                        </div>
+                {/* Skills Grid */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {skills.map((skill, index) => {
+                        // Extract the dynamic icon from our data file
+                        const IconComponent = skill.icon;
                         
-                        <div className="flex-1 w-full">
-                            <div className="flex justify-between items-center mb-3">
-                                <h3 className="text-lg font-semibold text-white">{skill.name}</h3>
-                                <span className="text-sm font-medium text-slate-500">{skill.level}%</span>
+                        return (
+                            <div 
+                                key={index}
+                                className="p-8 bg-background rounded-2xl border border-surface hover:border-primary/50 transition-all duration-300 group flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/5"
+                            >
+                                {/* Icon Container */}
+                                <div className="w-16 h-16 rounded-2xl bg-surface flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/10 border border-transparent group-hover:border-primary/20 transition-all duration-300">
+                                    <IconComponent className="w-8 h-8 text-slate-400 group-hover:text-primary transition-colors" />
+                                </div>
+                                
+                                {/* Skill Name */}
+                                <h3 className="text-lg font-bold text-white tracking-wide">
+                                    {skill.name}
+                                </h3>
                             </div>
-                            {/* Ultra-thin minimalist progress bar */}
-                            <div className="w-full bg-slate-800 rounded-full h-1">
-                                <div
-                                    className="bg-blue-500 h-1 rounded-full transition-all duration-1000 ease-out"
-                                    style={{ width: `${skill.level}%` }}
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                    );
-                })}
+                        );
+                    })}
                 </div>
+
             </div>
         </section>
     );

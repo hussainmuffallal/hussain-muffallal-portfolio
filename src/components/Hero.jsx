@@ -1,81 +1,91 @@
-import React from "react";
-import { ArrowRight, Mail, User, Briefcase } from "lucide-react";
+import React from 'react';
+import { ArrowRight, Mail } from 'lucide-react';
+
+const GithubIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
+
+const LinkedinIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
 
 export default function Hero() {
-    return(
-        <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 px-6 bg-slate-950 overflow-hidden">
-            {/* Subtle minimalist background glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none"></div>
-
-            <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8 w-full">
-            
-                {/* Left Column: Text Content */}
-                <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-                
-                    {/* Availability Badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-white/10 text-sm font-medium text-slate-300 mb-8">
-                        <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                        Available for Internships
-                    </div>
-
-                    <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-4">
-                        Hussain Muffallal
-                    </h1>
-                    
-                    <h2 className="text-2xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mb-6 pb-1 leading-relaxed">
-                        Software Engineering Student
-                    </h2>
-
-                    <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl font-light leading-relaxed">
-                        Building intelligent full-stack applications and scalable solutions.
-                    </p>
-
-                    {/* Buttons */}
-                    <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-12">
-                        <a href="#projects" className="px-8 py-3.5 rounded-full bg-white text-slate-950 font-semibold hover:bg-slate-200 transition-colors flex items-center gap-2">
-                            View My Work
-                            <ArrowRight className="w-4 h-4" />
-                        </a>
-                        <a href="/resume.pdf" download="Hussain_Muffallal_Resume.pdf" className="px-8 py-3.5 rounded-full bg-slate-900 text-white border border-white/10 hover:border-white/20 hover:bg-slate-800 transition-all">
-                            Download CV
-                        </a>
-                    </div>
-
-                    {/* Social Links */}
-                    <div className="flex gap-4 justify-center md:justify-start">
-                        {[
-                        { Icon: User, href: "https://github.com/hussainmuffallal" },
-                        { Icon: Briefcase, href: "https://www.linkedin.com/in/hussainmuffallal/" },
-                        { Icon: Mail, href: "mailto:hussainmufallal2004@gmail.com" }
-                        ].map((social, idx) => {
-                        const Icon = social.Icon;
-                        return (
-                            <a 
-                            key={idx} 
-                            href={social.href} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="w-12 h-12 rounded-full bg-slate-900 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-500/50 hover:bg-slate-800 transition-all duration-300"
-                            >
-                            <Icon className="w-5 h-5" />
-                            </a>
-                        );
-                        })}
-                    </div>
-                </div>
-
-                {/* Right Column: Profile Image */}
-                <div className="flex-shrink-0 relative mt-8 md:mt-0">
-                    {/* Subtle back glow instead of heavy neon */}
-                    <div className="absolute inset-0 bg-blue-500/10 rounded-3xl blur-2xl"></div>
-                    <img 
-                        src="/profile.jpeg" 
-                        alt="Hussain Muffallal - Portfolio Picture" 
-                        className="relative w-64 h-80 md:w-80 md:h-[400px] rounded-3xl object-cover border border-white/10 shadow-2xl" 
-                    />
-                </div>
-
+  return (
+    <section id="home" className="relative min-h-screen flex items-center justify-center px-6 pt-24 pb-12 bg-background">
+      <div className="max-w-4xl mx-auto text-center z-10">
+        
+        {/* Profile & Status Group */}
+        <div className="flex flex-col items-center gap-6 mb-8">
+          
+          {/* Profile Image */}
+          <div className="relative">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-surface overflow-hidden relative z-10">
+              <img 
+                src="/profile.jpeg" /* <-- KEEP YOUR PATH HERE */
+                alt="Hussain Muffallal" 
+                className="w-full h-full object-cover"
+              />
             </div>
-        </section>
-    );
+            {/* Subtle glowing ring */}
+            <div className="absolute inset-0 rounded-full bg-primary/30 blur-2xl -z-10 animate-pulse"></div>
+          </div>
+
+          {/* Status Badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-surface">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            <span className="text-sm font-medium text-slate-300">Available for Internships</span>
+          </div>
+
+        </div>
+
+        {/* Main Heading */}
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">
+          Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Intelligent</span> Experiences
+        </h1>
+
+        {/* Subtitle */}
+        <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+          I'm a Full-Stack & AI/ML Developer building scalable applications and recommendation engines. 
+          Currently studying Computer Science in Sri Lanka.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <a 
+            href="#projects"
+            className="w-full sm:w-auto px-8 py-4 bg-white text-background font-semibold rounded-xl hover:bg-slate-200 transition-colors flex items-center justify-center gap-2 group"
+          >
+            View My Work
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
+          <a 
+            href="#contact"
+            className="w-full sm:w-auto px-8 py-4 bg-surface text-white font-medium rounded-xl border border-white/5 hover:border-primary/50 transition-colors flex items-center justify-center gap-2"
+          >
+            <Mail className="w-4 h-4" />
+            Contact Me
+          </a>
+        </div>
+
+        {/* Social Links */}
+        <div className="flex items-center justify-center gap-6">
+          <a href="#" className="text-slate-400 hover:text-primary transition-colors">
+            <span className="sr-only">GitHub</span>
+            <GithubIcon />
+          </a>
+          <a href="#" className="text-slate-400 hover:text-primary transition-colors">
+            <span className="sr-only">LinkedIn</span>
+            <LinkedinIcon />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
 }
