@@ -51,6 +51,10 @@ export default function Contact() {
                 {/* Form Container */}
                 <div className="bg-surface/30 border border-surface rounded-3xl p-6 md:p-10">
                     <form onSubmit={onSubmit} className="space-y-6">
+                        
+                        {/* Web3Forms Honeypot Spam Protection */}
+                        <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
                         <div className="grid md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <label htmlFor="name" className="text-sm font-medium text-slate-300 ml-1">Name</label>

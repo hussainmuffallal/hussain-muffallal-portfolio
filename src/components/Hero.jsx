@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="relative">
             <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-surface overflow-hidden relative z-10">
               <img 
-                src="/profile.jpeg" /* <-- KEEP YOUR PATH HERE */
+                src="/profile.jpeg" 
                 alt="Hussain Muffallal" 
                 className="w-full h-full object-cover"
               />
@@ -45,12 +45,17 @@ export default function Hero() {
 
         </div>
 
-        {/* Main Heading */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">
-          Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Intelligent</span> Experiences
+        {/* Main Heading: Identity */}
+        <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight text-white">
+          Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Hussain Muffallal</span>
         </h1>
 
-        {/* Subtitle */}
+        {/* Subtitle: Value Proposition */}
+        <h2 className="text-2xl md:text-3xl font-medium mb-6 text-slate-300">
+          Engineering Intelligent Experiences
+        </h2>
+
+        {/* Subtext */}
         <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
           I'm a Full-Stack & AI/ML Developer building scalable applications and recommendation engines. 
           Currently studying Computer Science in Sri Lanka.
@@ -76,11 +81,21 @@ export default function Hero() {
 
         {/* Social Links */}
         <div className="flex items-center justify-center gap-6">
-          <a href="#" className="text-slate-400 hover:text-primary transition-colors">
+          <a 
+            href="https://github.com/hussainmuffallal" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-slate-400 hover:text-primary transition-colors"
+          >
             <span className="sr-only">GitHub</span>
             <GithubIcon />
           </a>
-          <a href="#" className="text-slate-400 hover:text-primary transition-colors">
+          <a 
+            href="https://linkedin.com/in/hussainmuffallal" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-slate-400 hover:text-primary transition-colors"
+          >
             <span className="sr-only">LinkedIn</span>
             <LinkedinIcon />
           </a>

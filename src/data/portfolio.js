@@ -25,8 +25,30 @@ export const projects = [
 ];
 
 export const skills = [
-    { name: "Machine Learning & AI", icon: BrainCircuit },
-    { name: "Frontend (React / Next.js)", icon: Layout },
-    { name: "Backend (Python / PHP)", icon: Server },
-    { name: "Database Architecture", icon: Database }
+    { 
+        name: "AI & Machine Learning", 
+        icon: BrainCircuit,
+        tools: ["Python", "Scikit-Learn", "Pandas", "Random Forests"]
+    },
+    { 
+        name: "Frontend Development", 
+        icon: Layout,
+        tools: ["React", "Next.js", "Tailwind CSS", "TypeScript"]
+    },
+    { 
+        name: "Backend Architecture", 
+        icon: Server,
+        tools: ["Python (FastAPI)", "PHP", "RESTful APIs"]
+    },
+    { 
+        name: "Database & Cloud", 
+        icon: Database,
+        tools: ["MySQL", "Supabase", "Vercel", "Git/GitHub"]
+    }
+];
+
+export const currentlyLearning = [
+    "AWS Cloud Foundations",
+    "Advanced RAG Architectures",
+    "System Design"
 ];
