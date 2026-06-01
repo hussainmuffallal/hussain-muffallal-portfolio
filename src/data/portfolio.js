@@ -52,3 +52,24 @@ export const currentlyLearning = [
     "Advanced RAG Architectures",
     "System Design"
 ];
+
+export const archiveProjects = [
+    {
+        year: "2025",
+        title: "Multi-User Blog Platform",
+        builtWith: ["PHP", "MySQL", "Tailwind CSS"],
+        link: "https://github.com/hussainmuffallal/Blog-Project" 
+    },
+    {
+        year: "2024",
+        title: "Task Management CLI",
+        builtWith: ["Python", "SQLite", "Algorithms"],
+        link: "https://github.com/yourusername/task-manager" // Update these links
+    },
+    {
+        year: "2024",
+        title: "University Management System",
+        builtWith: ["Java", "JavaFX", "OOP"],
+        link: "https://github.com/yourusername/uni-system" // Update these links
+    }
+];
