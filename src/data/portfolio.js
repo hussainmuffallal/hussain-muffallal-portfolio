@@ -1,26 +1,48 @@
-import { BrainCircuit, Globe, Smartphone, Database, Layout, Server } from "lucide-react";
+import { BrainCircuit, Globe, Smartphone, Database, Layout, Server, Sparkles } from "lucide-react";
 
-export const projects = [
+// The Hero Showcase
+export const featuredProject = [
     {
-        title: "EventLK AI Engine",
-        description: "Engineered the AI/ML backend for a smart event planning platform. Optimized a Random Forest model, boosting prediction accuracy through custom feature engineering (budget_per_head).",
+        title: "EventLK - AI Event Platform",
+        description: "Architected the core recommendation engine for a smart event planning platform. Developed and trained custom Random Forest models—combining classifiers and regressors with generative AI integrations—to intelligently predict vendor matching and optimize complex financial planning at scale.",
         tech: ["Python", "Scikit-Learn", "React", "Machine Learning"],
-        link: "https://eventlk.com",
-        icon: BrainCircuit // Dynamic icon assigned here
-    },
+        live: "https://eventlk.com",
+        github: "https://github.com/Rism583/Project-Eventlk-1",
+        image: "/eventlk-cover.png"
+    }
+];
+
+// Client & Freelance Work
+export const freelanceProjects = [
     {
         title: "Rosary Global Booking",
         description: "Designed and deployed a serverless freelance booking platform for a travel agency. Engineered dynamic pricing features, Google Maps API integration, and advanced SEO.",
-        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-        link: "https://github.com/yourusername", // Update with your actual link
-        icon: Globe
+        tech: ["Next.js", "React", "Tailwind CSS", "Cloudflare"],
+        live: "https://rosaryglobal.com", 
+        image: "/rosary-cover.png"
     },
     {
-        title: "Cross Math Mobile",
-        description: "A native Android application featuring dynamic algorithmic puzzle generation, robust state management, and a highly responsive touch interface.",
-        tech: ["Kotlin", "Android Studio", "Algorithms"],
-        link: "https://github.com/yourusername", // Update with your actual link
-        icon: Smartphone
+        title: "MHM Taxi",
+        description: "Developed a comprehensive digital booking platform for a taxi and tour service. Engineered features for ride scheduling, tour package exploration, and optimized mobile-responsive UI for on-the-go users.",
+        tech: ["React", "Tailwind CSS", "Booking Architecture"], 
+        live: "https://mhmtaxi.com", 
+        image: "/mhm-cover.png"
+    }
+];
+
+// TIER 3: The Developer Archive
+export const archiveProjects = [
+    {
+        year: "2025",
+        title: "Real Estate Property Platform",
+        builtWith: ["React", "Node.js"],
+        link: "https://github.com/hussainmuffallal/estate-agent-react-project"
+    },
+    {
+        year: "2024",
+        title: "Multi-User Blog Platform",
+        builtWith: ["PHP", "MySQL", "Bootstrap"],
+        link: "https://github.com/hussainmuffallal/Blog-Project"
     }
 ];
 
@@ -43,7 +65,7 @@ export const skills = [
     { 
         name: "Database & Cloud", 
         icon: Database,
-        tools: ["MySQL", "Supabase", "Vercel", "Git/GitHub"]
+        tools: ["MySQL", "Supabase", "Vercel", "Cloudflare", "Git/GitHub"]
     }
 ];
 
@@ -51,25 +73,4 @@ export const currentlyLearning = [
     "AWS Cloud Foundations",
     "Advanced RAG Architectures",
     "System Design"
-];
-
-export const archiveProjects = [
-    {
-        year: "2025",
-        title: "Multi-User Blog Platform",
-        builtWith: ["PHP", "MySQL", "Tailwind CSS"],
-        link: "https://github.com/hussainmuffallal/Blog-Project" 
-    },
-    {
-        year: "2024",
-        title: "Task Management CLI",
-        builtWith: ["Python", "SQLite", "Algorithms"],
-        link: "https://github.com/yourusername/task-manager" // Update these links
-    },
-    {
-        year: "2024",
-        title: "University Management System",
-        builtWith: ["Java", "JavaFX", "OOP"],
-        link: "https://github.com/yourusername/uni-system" // Update these links
-    }
 ];
