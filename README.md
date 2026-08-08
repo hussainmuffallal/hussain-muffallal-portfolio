@@ -2,7 +2,7 @@
 
 A modern, high-performance personal portfolio and developer sandbox built with React, Vite, and Tailwind CSS. Designed to showcase progression across AI/ML engineering, full-stack development, and freelance client delivery.
 
-![Portfolio Preview](/public/profile.jpg) 
+![Portfolio Preview](/public/homepage.png) 
 
 ## 🏗 Architecture & Features
 
@@ -31,3 +31,17 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/hussainmuffallal/hussain-muffallal-portfolio.git
+
+2. **Navigate to the directory:**
+    ```bash
+    cd your-repo-name
+
+3. **Install dependencies:**
+    ```bash
+    npm install
+
+4. **Start the development server:**
+    ```bash
+    npm run dev
+
+The site will be available at http://localhost:5173
