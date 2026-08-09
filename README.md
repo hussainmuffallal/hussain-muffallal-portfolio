@@ -34,7 +34,7 @@ To run this project locally, follow these steps:
 
 2. **Navigate to the directory:**
     ```bash
-    cd your-repo-name
+    cd hussain-muffallal-portfolio
 
 3. **Install dependencies:**
     ```bash
